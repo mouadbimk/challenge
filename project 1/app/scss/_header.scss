@@ -1,78 +1,77 @@
-.header{
+/*! header style */
+.header {
     // Hamburger Open styles
-    &.open{
-        
+    &.open {
         .header__toggle {
-            > span:first-child{
+            > span:first-child {
                 transform: rotate(45deg);
             }
-            > span:nth-child(2){
+            > span:nth-child(2) {
                 opacity: 0;
             }
-            > span:last-child{
+            > span:last-child {
                 transform: rotate(-45deg);
             }
         }
-      
-        
-       }
-    .overlay{
-        background-image: linear-gradient($darkBlue,transparent);
+    }
+    .overlay {
+        background-image: linear-gradient($darkBlue, transparent);
         position: fixed;
-        top: 3.75rem;
+        top: 0;
+        z-index: 100;
         right: 0;
         left: 0;
         bottom: 0;
     }
 
-    nav{
+    nav {
+        position: relative;
         padding-top: 1.065rem;
+        background-color: white;
+        z-index: 101;
         padding-bottom: 1.065rem;
     }
-    &__logo{
-        img{
+    &__logo {
+        img {
             width: 8.8125rem;
             height: 1.375rem;
         }
     }
-    &__toggle{ // mobile menu
-        > span{
+    &__toggle {
+        // mobile menu
+        > span {
             display: block;
             width: 26px;
             height: 2px;
             background-color: $darkBlue;
-            transition: .5s ease-in-out;
+            transition: 0.5s ease-in-out;
             transform-origin: 3px 1px;
             z-index: 1;
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
-     
-    
-
     }
-    &__links{ //menu desktop
-        border: 1px solid red;
+    &__links {
+        //menu desktop
         padding: 17px 1.5rem;
-        a{
+        a {
             font-size: $font-sm;
             color: $grayishBlue;
-            transition: .5s ease-in-out;
-            transition: color .2s ease-in-out;
+            transition: 0.5s ease-in-out;
+            transition: color 0.2s ease-in-out;
             position: relative;
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-right: 32px;
-                
             }
-            &:hover{
+            &:hover {
                 color: $darkBlue;
-                &::before{
-                   width: 100%;
-                   opacity: 1;
+                &::before {
+                    width: 100%;
+                    opacity: 1;
                 }
             }
-            &::before{
+            &::before {
                 position: absolute;
                 content: "";
                 display: block;
@@ -81,36 +80,29 @@
                 right: 0;
                 height: 5px;
                 bottom: -30px;
-                background: linear-gradient(to right ,$limeGreen, $brightCyan);
+                background: linear-gradient(to right, $limeGreen, $brightCyan);
                 opacity: 0;
-                transition: .3s ease-in-out;
+                transition: 0.3s ease-in-out;
             }
         }
     }
-    &__cta{
-        font-size: $font-sm;
-        color: $white;
-        opacity: 1;
-        transition: opacity .3s ease-in-out;
-        &:hover{
-            opacity: 0.75;
-        }
-    }
-    &__menu{
-        background:$white;
+
+    &__menu {
+        background: $white;
         padding: 1.625rem;
         margin-top: 1.5rem;
         border-radius: 3px;
         position: absolute;
         width: calc(100% - 3rem);
         left: 50%;
+        z-index: 101;
         transform: translateX(-50%);
-        a{
+        a {
             display: block;
             padding: 0.625rem;
             color: $darkBlue;
             text-align: center;
         }
     }
-
 }
+/*! end header style */

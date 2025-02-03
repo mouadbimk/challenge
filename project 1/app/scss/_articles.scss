@@ -1,0 +1,34 @@
+/*! articles style */
+.article{
+    &__grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        padding: 0.9378rem;
+        @include breakpoint-up(medium){
+            flex: 1 0 50%;
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+    }
+    &__image{
+       width: 300px;
+       height: 300px;
+       img{
+        width: 100%;
+        height: 100%;
+    }
+    }
+    &__author{
+
+    }
+    &__title{
+
+    }
+    &__description{
+
+    }
+}
+/*! end articles style */

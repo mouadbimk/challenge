@@ -1,12 +1,12 @@
-html{
+html {
     font-size: 100%;
     box-sizing: border-box;
-    
 }
-*,*::before{
+*,
+*::before {
     box-sizing: inherit;
 }
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: "Public Sans", serif;
@@ -14,49 +14,127 @@ body{
     font-weight: 300;
     color: $grayishBlue;
     line-height: 1.3;
+    min-height: 200vh;
+    &.noscroll {
+        overflow: hidden;
+    }
+    @include breakpoint-up(large){
+        font-size: $font-med;
+    }
 }
-a,a:visited ,a:hover{
+a,
+a:visited,
+a:hover {
     text-decoration: none;
 }
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 300;
+    color: $darkBlue;
+    line-height: 1,15;
+}
+h1{
+    font-size: 2.31rem;
+    margin-bottom: 1.5rem;
+    @include breakpoint-up(large){
+        font-size: $font-xlg;
+    }
+
+}
+p{
+    line-height: 1.68rem;
+    margin-bottom: 2.25rem;
+
+}
+h2{
+    @include breakpoint-up(large){
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+    margin-bottom: 1.5625rem;
+    font-size: 1.875rem;
+    font-weight: 400;
+   
+}
+
 //flexBoz
-.flex{
+.flex {
     display: flex;
-    &-jc-sb{
+    &-jc-sb {
         justify-content: space-between;
     }
-    &-jc-c{
+    &-jc-c {
         justify-content: center;
     }
-    &-ai-c{
+    &-ai-c {
         align-items: center;
     }
 }
 //container
-.container{
-    padding: 0 1.5rem;
-
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+    &--py{
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+    &--px{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    &--pt{
+        padding-top: 2.25rem;
+    }
+    &--pb{
+        padding-bottom: 2.25rem;
+    }
+    &--pr{
+        padding-right: 1.5rem;
+    }
+    &--pl{
+        padding-left: 1.5rem;
+    }
+    &--pall{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 4.375rem;
+        padding-top: 4.375rem;
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+            padding-bottom: 3rem;
+        }
+    }
 }
 //Buttons
-.button ,button{
+.button,
+button {
+    display: inline-block;
     padding: 0.875rem 1.875rem;
-    background: linear-gradient(to right ,$limeGreen, $brightCyan);
+    color: $white;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    font-size: $font-sm;
     border: 0;
     color: $white;
     font-weight: 400;
     cursor: pointer;
-    border-radius: 50px ;
+    border-radius: 50px;
+    transition: opacity 0.3s ease-in-out;
+    &:hover{
+        opacity: 0.75;
+    }
+
 }
 /*! media query start */
 //visibility
-.hide-for-mobile{
+.hide-for-mobile {
     //hide for tablet and mobile
-    @include breakpoint-down(medium){
+    @include breakpoint-down(medium) {
         display: none;
     }
 }
-.hide-for-desktop{
+.hide-for-desktop {
     //hide for desktop viewport widhts
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
         display: none;
     }
 }
