@@ -1,15 +1,40 @@
 /*! media query end */
 @keyframes fade-in {
   from {
+    visibility: hidden;
     opacity: 0;
   }
   1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
+.fade-in {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 0.3s ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -46,6 +71,10 @@ a, a:visited, a:hover {
   align-items: center;
 }
 
+.container {
+  padding: 0 1.5rem;
+}
+
 .button, button {
   padding: 0.875rem 1.875rem;
   background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
@@ -70,21 +99,16 @@ a, a:visited, a:hover {
 }
 
 /*! media query end */
-.header.open .overlay {
-  display: block;
-  animation: fade-in 0.3s ease-in-out forwards;
-}
-.header.open .header__menu > span:first-child {
+.header.open .header__toggle > span:first-child {
   transform: rotate(45deg);
 }
-.header.open .header__menu > span:nth-child(2) {
+.header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
 }
-.header.open .header__menu > span:last-child {
+.header.open .header__toggle > span:last-child {
   transform: rotate(-45deg);
 }
 .header .overlay {
-  display: none;
   background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
   position: fixed;
   top: 3.75rem;
@@ -93,13 +117,14 @@ a, a:visited, a:hover {
   bottom: 0;
 }
 .header nav {
-  padding: 24px;
+  padding-top: 1.065rem;
+  padding-bottom: 1.065rem;
 }
 .header__logo img {
   width: 8.8125rem;
   height: 1.375rem;
 }
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -108,7 +133,7 @@ a, a:visited, a:hover {
   transform-origin: 3px 1px;
   z-index: 1;
 }
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 5px;
 }
 .header__links {
@@ -153,4 +178,20 @@ a, a:visited, a:hover {
 }
 .header__cta:hover {
   opacity: 0.75;
+}
+.header__menu {
+  background: hsl(0, 0%, 100%);
+  padding: 1.625rem;
+  margin-top: 1.5rem;
+  border-radius: 3px;
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__menu a {
+  display: block;
+  padding: 0.625rem;
+  color: hsl(233, 26%, 24%);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

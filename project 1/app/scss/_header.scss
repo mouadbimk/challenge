@@ -1,11 +1,8 @@
 .header{
     // Hamburger Open styles
     &.open{
-        .overlay{
-            display: block;
-            animation: fade-in .3s ease-in-out forwards;
-        }
-        .header__menu {
+        
+        .header__toggle {
             > span:first-child{
                 transform: rotate(45deg);
             }
@@ -20,7 +17,6 @@
         
        }
     .overlay{
-        display: none;
         background-image: linear-gradient($darkBlue,transparent);
         position: fixed;
         top: 3.75rem;
@@ -30,7 +26,8 @@
     }
 
     nav{
-        padding: 24px;
+        padding-top: 1.065rem;
+        padding-bottom: 1.065rem;
     }
     &__logo{
         img{
@@ -38,7 +35,7 @@
             height: 1.375rem;
         }
     }
-    &__menu{ // mobile menu
+    &__toggle{ // mobile menu
         > span{
             display: block;
             width: 26px;
@@ -55,7 +52,7 @@
     
 
     }
-    &__links{
+    &__links{ //menu desktop
         border: 1px solid red;
         padding: 17px 1.5rem;
         a{
@@ -97,6 +94,22 @@
         transition: opacity .3s ease-in-out;
         &:hover{
             opacity: 0.75;
+        }
+    }
+    &__menu{
+        background:$white;
+        padding: 1.625rem;
+        margin-top: 1.5rem;
+        border-radius: 3px;
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        a{
+            display: block;
+            padding: 0.625rem;
+            color: $darkBlue;
+            text-align: center;
         }
     }
 
