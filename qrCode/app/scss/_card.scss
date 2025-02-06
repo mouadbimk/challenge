@@ -1,0 +1,38 @@
+.card{
+    width: 20.625rem;
+    height: 31.871rem;
+    padding: 1rem;
+    box-shadow: 0px 3px 15px rgba(0,0,0, 0.15);
+    background-color: $white;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    text-align: center;
+    &__image{
+        background-image: url('/app/images/image-qr-code.png');
+        width: 18.125rem;
+        height: 18.125rem;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        border-radius: 0.5rem;
+    }
+    &__title{
+        margin-top: 1.875rem;
+        h1{
+            font-size: 1.5rem;
+            color: $darkBlue;
+        
+        }
+    }
+    &__content{
+        padding: 0 0.7rem;
+    }
+    &__description{
+        p{
+            font-size: 0.9375rem;
+            color: $gray;
+            font-weight: 400;
+        }
+    }
+}
