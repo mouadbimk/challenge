@@ -1,0 +1,45 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*,*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $grayWhite;
+    min-height: 100vh;
+    
+}
+h1,h2,h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $veryDark;
+}
+a,a:visited,a:hover{
+    text-decoration: none;
+}
+.copy {
+    font-size: 1rem;
+    text-align: center;
+    color: #000;
+    padding: 8px 0 5px 0;
+  }
+  
+  .copy a {
+    color: hsl(161.13, 100%, 29.6%);
+    font-weight: 500;
+  }
+  
+  .copy span {
+    color: red;
+    font-size: 1.35rem;
+    padding: 0.4rem;
+  }

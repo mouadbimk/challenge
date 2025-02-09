@@ -1,0 +1,143 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: hsl(234, 12%, 34%);
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 1rem;
+  text-align: center;
+  color: #000;
+  padding: 8px 0 5px 0;
+}
+
+.copy a {
+  color: hsl(161.13, 100%, 29.6%);
+  font-weight: 500;
+}
+
+.copy span {
+  color: red;
+  font-size: 1.35rem;
+  padding: 0.4rem;
+}
+
+.box {
+  padding: 2.5rem;
+}
+@media (max-width: 39.9375em) {
+  .box {
+    max-width: 100%;
+    text-align: left;
+    padding: 3.125rem 1.875rem;
+  }
+}
+.box__header {
+  text-align: center;
+  width: 600px;
+  margin: auto;
+}
+@media (max-width: 39.9375em) {
+  .box__header {
+    width: 100%;
+    text-align: left;
+  }
+}
+.box__header h1 {
+  font-weight: 200;
+  font-size: 2.3125rem;
+}
+.box__header h2 {
+  font-size: 2.3125rem;
+  font-weight: 600;
+}
+.box__header p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  padding: 0 2rem;
+  margin-top: 1.25rem;
+}
+.box__content {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+@media (max-width: 39.9375em) {
+  .box__content {
+    flex-direction: column;
+  }
+}
+.box__content .supervisor {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.box__content .team {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+.box__content .karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+.box__content .calculator {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+.box__one {
+  padding: 2.5rem;
+  width: 27.5rem;
+  height: 19.375rem;
+  text-align: left;
+  background-color: #fff;
+  margin: 1.25rem;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+@media (max-width: 39.9375em) {
+  .box__one {
+    width: 375px;
+  }
+}
+.box__one h2 {
+  font-weight: 600;
+}
+.box__one p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  margin-top: 1.25rem;
+}
+.box__one img {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 2.5rem;
+}
+.box__two {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */
